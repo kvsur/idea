@@ -76,7 +76,7 @@
         ```
     5. #### 单标签不需要封口
         类似于img，br，link...之类的标签不需要进行封口；
-        
+
 3. ### CSS
     1. #### 缩进
         缩进建议采用tab缩进（4个空格）
@@ -175,7 +175,7 @@
         * 每个属性独占一行
         * 多个规则的分隔符','后
 
-            ```css
+         ```css
             /* not good */
             .element
             {color: red; background-color: black;}
