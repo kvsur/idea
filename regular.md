@@ -531,7 +531,13 @@
             ```
     10. #### 函数
         1. 涉及到事件监听时尽可能不使用匿名函数
-        2. 在类似于以下的
+        2. 使用匿名函数的情况下，不给函数命名(inline function)
+            ```js
+                // not good
+                [1, 2, 3, 4, 5].forEach(function a() {
+
+                });
+            ```
     11. #### import 使用
         在非export default 模块中引入时
         ```javascript
@@ -542,7 +548,7 @@
             export const m2 = {};
         ```
     12. #### 处理好异步事件
-        对于异步事件或者异步调用，不推荐 setTimeout之类的岩石操作；
+        对于异步事件或者异步调用，不推荐 setTimeout之类的延迟操作；
         尽可能的先尝试回调 + 事件发布订阅模式
         ```javascript
         const emitor = new Emitor();
