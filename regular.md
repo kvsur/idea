@@ -2,7 +2,7 @@
 1. ### 命名规则
     1. #### 项目命名
         项目命名一般采用小写形式，有多个单词的项目名需要使用下划线或者减号线分隔，不建议采用驼峰形式；
-        ```
+        ```js
         my_project_name/my-project-name
         ```
     2. #### 文件命名
@@ -11,14 +11,14 @@
     3. #### 变量命名
         ......
     4. #### 目录命名
-        ```
+        ```js
         scripts, styles, images, data_models
         ```
 2. ### HTML
     1. #### 属性值
         1. 属性值一般推荐使用小写，多词使用减号线或者下划线，使用时尽量统一
 
-        ```
+        ```html
             <img src="images/company_logo.png" alt="Company">
             <h1 class="hello-world">Hello, world!</h1>
         ```
@@ -36,7 +36,7 @@
         class是为高可复用组件设计的，所以应该放在第一位；尽量少的使用id；
         对于boolean属性值，存在的话表示为true，不存在则为false
 
-        ```
+        ```html
             <input type="text" disabled>
             <input type="checkbox" value="1" checked>
             <select>
@@ -47,7 +47,7 @@
     1. #### 缩进
         缩进建议采用tab缩进（4个空格）
 
-        ```
+        ```css
         element {
             position: absolute;
             top: 10px;
@@ -74,7 +74,7 @@
         * 属性值中的','后
         * 注释 '/'后 和 '/'前
 
-        ```
+        ```css
             /* not good */
             .element {
                 color :red! important;
@@ -134,5 +134,55 @@
             }
         ```
     4. #### 换行
+        * '{' 前不需要换行
+        <br/>
+        #### 以下需要换行：
+        * '{'后 和 '}'前
+        * 每个属性独占一行
+        * 多个规则的分隔符','后
+        ```css
+        /* not good */
+        .element
+        {color: red; background-color: black;}
+
+        /* good */
+        .element {
+            color: red;
+            background-color: black;
+        }
+
+        /* not good */
+        .element, .dialog {
+            ...
+        }
+
+        /* good */
+        .element,
+        .dialog {
+            ...
+        }
+        ```
+    5. #### 注释与注释的缩进
+        注释建议采用 /** comment */ 形式（即使在scss或者less中也不要使用 // comment）
+        ```css
+            /* Modal header */
+        .modal-header {
+            ...
+        }
+
+        /*
+        * Modal header
+        */
+        .modal-header {
+            ...
+        }
+
+        .modal-header {
+            /* 50px */
+            width: 50px;
+
+            color: red; /* color red */
+        }
+        ```
 4. ### JavaScript
-4. ### 版本管理
+5. ### 版本管理
