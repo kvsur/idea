@@ -20,10 +20,10 @@
     1. #### 属性值
         1. 属性值一般推荐使用小写，多词使用减号线或者下划线，使用时尽量统一
 
-        ```html
-            <img src="images/company_logo.png" alt="Company">
-            <h1 class="hello-world">Hello, world!</h1>
-        ```
+            ```html
+                <img src="images/company_logo.png" alt="Company">
+                <h1 class="hello-world">Hello, world!</h1>
+            ```
 
         2. 属性值使用双引号包括
     2. #### 属性书写顺序
@@ -38,13 +38,13 @@
         class是为高可复用组件设计的，所以应该放在第一位；尽量少的使用id；
         对于boolean属性值，存在的话表示为true，不存在则为false
 
-        ```html
-            <input type="text" disabled>
-            <input type="checkbox" value="1" checked>
-            <select>
-                <option value="1" selected>1</option>
-            </select>
-        ```
+            ```html
+                <input type="text" disabled>
+                <input type="checkbox" value="1" checked>
+                <select>
+                    <option value="1" selected>1</option>
+                </select>
+            ```
     3. #### 多使用H5最新的语义化标签
         例如：
         >* \<section>
@@ -72,7 +72,7 @@
         <!-- good -->
         <article>
             <p>这里是内容</p>
-        </artcle>
+        </article>
         ```
 3. ### CSS
     1. #### 缩进
@@ -105,65 +105,65 @@
         * 属性值中的','后
         * 注释 '/'后 和 '/'前
 
-        ```scss
-            /* not good */
-            .element {
-                color :red! important;
-                background-color: rgba(0,0,0,.5);
-            }
+            ```scss
+                /* not good */
+                .element {
+                    color :red! important;
+                    background-color: rgba(0,0,0,.5);
+                }
 
-            /* good */
-            .element {
-                color: red !important;
-                background-color: rgba(0, 0, 0, .5);
-            }
+                /* good */
+                .element {
+                    color: red !important;
+                    background-color: rgba(0, 0, 0, .5);
+                }
 
-            /* not good */
-            .element ,
-            .dialog{
-                ...
-            }
+                /* not good */
+                .element ,
+                .dialog{
+                    ...
+                }
 
-            /* good */
-            .element,
-            .dialog {
+                /* good */
+                .element,
+                .dialog {
 
-            }
+                }
 
-            /* not good */
-            .element>.dialog{
-                ...
-            }
+                /* not good */
+                .element>.dialog{
+                    ...
+                }
 
-            /* good */
-            .element > .dialog{
-                ...
-            }
+                /* good */
+                .element > .dialog{
+                    ...
+                }
 
-            /* not good */
-            .element{
-                ...
-            }
+                /* not good */
+                .element{
+                    ...
+                }
 
-            /* good */
-            .element {
-                ...
-            }
+                /* good */
+                .element {
+                    ...
+                }
 
-            /* not good */
-            @if{
-                ...
-            }@else{
-                ...
-            }
+                /* not good */
+                @if{
+                    ...
+                }@else{
+                    ...
+                }
 
-            /* good */
-            @if {
-                ...
-            } @else {
-                ...
-            }
-        ```
+                /* good */
+                @if {
+                    ...
+                } @else {
+                    ...
+                }
+            ```
     4. #### 换行
         * '{' 前不需要换行
         <br/>
@@ -172,27 +172,27 @@
         * 每个属性独占一行
         * 多个规则的分隔符','后
 
-        ```css
-        /* not good */
-        .element
-        {color: red; background-color: black;}
+            ```css
+            /* not good */
+            .element
+            {color: red; background-color: black;}
 
-        /* good */
-        .element {
-            color: red;
-            background-color: black;
-        }
+            /* good */
+            .element {
+                color: red;
+                background-color: black;
+            }
 
-        /* not good */
-        .element, .dialog {
-            ...
-        }
+            /* not good */
+            .element, .dialog {
+                ...
+            }
 
-        /* good */
-        .element,
-        .dialog {
-            ...
-        }
+            /* good */
+            .element,
+            .dialog {
+                ...
+            }
         ```
     5. #### 注释与注释的缩进
         注释建议采用 /** comment */ 形式（即使在scss或者less中也不要使用 // comment）
@@ -224,35 +224,35 @@
         * ID采用驼峰形式
         * 预编译css中的变量、函数、混合、placeholder采用驼峰命名
 
-        ```scss
-            /* class */
-            .element-content {
-                ...
-            }
+            ```scss
+                /* class */
+                .element-content {
+                    ...
+                }
 
-            /* id */
-            #myDialog {
-                ...
-            }
+                /* id */
+                #myDialog {
+                    ...
+                }
 
-            /* 变量 */
-            $colorBlack: #000;
+                /* 变量 */
+                $colorBlack: #000;
 
-            /* 函数 */
-            @function pxToRem($px) {
-                ...
-            }
+                /* 函数 */
+                @function pxToRem($px) {
+                    ...
+                }
 
-            /* 混合 */
-            @mixin centerBlock {
-                ...
-            }
+                /* 混合 */
+                @mixin centerBlock {
+                    ...
+                }
 
-            /* placeholder */
-            %myDialog {
-                ...
-            }
-        ```
+                /* placeholder */
+                %myDialog {
+                    ...
+                }
+            ```
 
     7. #### 属性简写
         属性简写需要你非常清楚属性值的正确顺序，而且在大多数情况下并不需要设置属性简写中包含的所有值，所以建议尽量分开声明会更加清晰；<br>
@@ -265,20 +265,20 @@
         * transition
         * animation
 
-        ```css
-            .box {
-                /** 顺序是 上 右 下 左 */
-                margin: 1px 1px 1px 1px;
-                /** 顺序是 10px 指定上下， 20px 制定左右 */
-                padding: 10px 12px;
-            }
-            .element {
-                transition-delay: 2s;
-                transition-timing-function: linear;
-                transition-duration: 1s;
-                transition-property: opacity;
-            }
-        ```
+            ```css
+                .box {
+                    /** 顺序是 上 右 下 左 */
+                    margin: 1px 1px 1px 1px;
+                    /** 顺序是 10px 指定上下， 20px 制定左右 */
+                    padding: 10px 12px;
+                }
+                .element {
+                    transition-delay: 2s;
+                    transition-timing-function: linear;
+                    transition-duration: 1s;
+                    transition-property: opacity;
+                }
+            ```
     8. #### 颜色
         颜色推荐使用十六进制的小写字母，能简写的减量简写；
         ```css
@@ -327,52 +327,52 @@
         ```
     10. #### 兼容性书写规范
         1. 浏览器引擎前缀(Vendor Prefix)有哪些？ 
-        >* -moz- /* 火狐等使用Mozilla浏览器引擎的浏览器 */ 
-        >* -webkit- /* Safari, 谷歌浏览器等使用Webkit引擎的浏览器 */ 
-        >* -o- /* Opera浏览器(早期) */ 
-        >* -ms- /* Internet Explorer (不一定) */ 
+            >* -moz- /* 火狐等使用Mozilla浏览器引擎的浏览器 */ 
+            >* -webkit- /* Safari, 谷歌浏览器等使用Webkit引擎的浏览器 */ 
+            >* -o- /* Opera浏览器(早期) */ 
+            >* -ms- /* Internet Explorer (不一定) */ 
 
         2. 使用浏览器引擎前缀的原因：
-        >* 试验一些还未成为标准的的CSS属性——也许永远不会成为标准 
-        >* 对新出现的标准的CSS3属性特征做实验性的实现 
-        >* 对CSS3中一些新属性做等效语义的个性实现 
+            >* 试验一些还未成为标准的的CSS属性——也许永远不会成为标准 
+            >* 对新出现的标准的CSS3属性特征做实验性的实现 
+            >* 对CSS3中一些新属性做等效语义的个性实现 
 
         3. 前缀使用规则是把不带前缀的版本放在最后一行：
-        ```css
-        -moz-border-radius: 10px; 
-        -webkit-border-radius: 10px; 
-        -o-border-radius: 10px; 
-        border-radius: 10px; 
-        ```
+            ```css
+            -moz-border-radius: 10px; 
+            -webkit-border-radius: 10px; 
+            -o-border-radius: 10px; 
+            border-radius: 10px; 
+            ```
 
         4. 主要的需要添加浏览器引擎前缀(vendor-prefix)的属性包括：
-        ```txt
-        @keyframes
-        移动和变换属性(transition-property, transition-duration, transition-timing-function, transition-delay)
-        动画属性 (animation-name, animation-duration, animation-timing-function, animation-delay)
-        border-radius
-        box-shadow
-        backface-visibility
-        column属性
-        flex属性
-        perspective属性
-        ```
+            ```txt
+            @keyframes
+            移动和变换属性(transition-property, transition-duration, transition-timing-function, transition-delay)
+            动画属性 (animation-name, animation-duration, animation-timing-function, animation-delay)
+            border-radius
+            box-shadow
+            backface-visibility
+            column属性
+            flex属性
+            perspective属性
+            ```
 
         5. 复杂属性的一般写法（以keyframes为例）
-        ```css
-        @-webkit-keyframes fadeIn {
-            0% { opacity: 0; } 100% { opacity: 0; }
-        }
-        @-moz-keyframes fadeIn {
-            0% { opacity: 0; } 100% { opacity: 0; }
-        }
-        @-o-keyframes fadeIn {
-            0% { opacity: 0; } 100% { opacity: 0; }
-        }
-        @-ms-keyframes fadeIn {
-            0% { opacity: 0; } 100% { opacity: 0; }
-        }
-        ```
+            ```css
+            @-webkit-keyframes fadeIn {
+                0% { opacity: 0; } 100% { opacity: 0; }
+            }
+            @-moz-keyframes fadeIn {
+                0% { opacity: 0; } 100% { opacity: 0; }
+            }
+            @-o-keyframes fadeIn {
+                0% { opacity: 0; } 100% { opacity: 0; }
+            }
+            @-ms-keyframes fadeIn {
+                0% { opacity: 0; } 100% { opacity: 0; }
+            }
+            ```
     11. #### 其他
         >* 不允许有空的规则；
         >* 元素选择器用小写字母；
@@ -426,42 +426,42 @@
         * 无论是函数声明还是函数表达式，'{'前一定要有空格
         * 函数的参数之间
 
-        ```javascript
-            cosnt person = {
-                name: 'lc',
-                age: 23
-            };
+            ```javascript
+                cosnt person = {
+                    name: 'lc',
+                    age: 23
+                };
 
-            /**
-            * getInfo of a person
-            */
-            function getInfo(person = {}, context = {}) {
-                const name = person.name ? person.name : 'lc',
-                      age = person.age >= 0 ? person.age : 1;
-                
-                if (age < 20) {
-                    age += 1;
-                } else if (age > 40) {
-                    age -= 10;
+                /**
+                * getInfo of a person
+                */
+                function getInfo(person = {}, context = {}) {
+                    const name = person.name ? person.name : 'lc',
+                        age = person.age >= 0 ? person.age : 1;
+                    
+                    if (age < 20) {
+                        age += 1;
+                    } else if (age > 40) {
+                        age -= 10;
+                    }
+
+                    // output the key of person obj
+                    const keys = Object.keys(person);
+                    for (let key of keys) {
+                        console.log(key);
+                    }
+                    
+                    try {
+                        new Promise((resolve, reject) => {
+
+                        });
+                    } catch (e) {
+
+                    }
+
+                    return `${name}: ${age} years old!!!`;
                 }
-
-                // output the key of person obj
-                const keys = Object.keys(person);
-                for (let key of keys) {
-                    console.log(key);
-                }
-                
-                try {
-                    new Promise((resolve, reject) => {
-
-                    });
-                } catch (e) {
-
-                }
-
-                return `${name}: ${age} years old!!!`;
-            }
-        ```
+            ```
     5. #### 空行
         * 变量声明后（当变量声明在代码块的最后一行时，则无需空行）
         * 注释前（当注释在代码块的第一行时，则无需空行）
@@ -476,31 +476,77 @@
         * 代码块'{'后和'}'前
         * 变量赋值后
     7. #### 单行注释及多行注释及函数注释
-        单行注释/需要空行，具体注释之前需要空格，最后的/之前需要空格
-        ```javascript
+        1. 单行注释/需要空行，具体注释之前需要空格，最后的/之前需要空格
+            ```javascript
 
-        /** this is comment */
+            /** this is comment */
 
-        // this is comment
+            // this is comment
 
-        /**
-        * @author licheng
-        * @param { string } c 这是一个参数
-        */
-        function foo(c) {
-            return c**c;
-        }
-        ```
+            /**
+            * @author licheng
+            * @param { string } c 这是一个参数
+            */
+            function foo(c) {
+                return c**c;
+            }
+            ```
+        2. jsDoc
+            ```javascript
+                /**
+                * @func
+                * @desc 一个带参数的函数
+                * @param {string} a - 参数a
+                * @param {number} b=1 - 参数b默认值为1
+                * @param {string} c=1 - 参数c有两种支持的取值</br>1—表示x</br>2—表示xx
+                * @param {object} d - 参数d为一个对象
+                * @param {string} d.e - 参数d的e属性
+                * @param {string} d.f - 参数d的f属性
+                * @param {object[]} g - 参数g为一个对象数组
+                * @param {string} g.h - 参数g数组中一项的h属性
+                * @param {string} g.i - 参数g数组中一项的i属性
+                * @param {string} [j] - 参数j是一个可选参数
+                */
+                function foo(a, b, c, d, g, j) {
+                    ...
+                }
+            ```
+            可参考[JSDoc Guide](http://yuri4ever.github.io/jsdoc/ 'JSDoc Guide')
+
+            或者 vscode中使用jscode插件
     8. #### 引号
         <div style="color: #f97541; font-size: 20px;">在js中能使用单引号的地方尽量使用单引号</div>
     9. #### 变量声明
+        1. 尽可能的使用块级变量声明方式(let、const)
+        2. for循环中
+            ```javascript
+
+                for (let index = 0; index < 100; index++) {
+                    console.log(index);
+                }
+
+                for (let item of list) {
+                    console.log(item.value);
+                }
+            ```
     10. #### 函数
+        1. 涉及到事件监听时尽可能不使用匿名函数
+        2. 在类似于以下的
+    11. #### import 使用
+        在非export default 模块中引入时
+        ```javascript
+            //  '{' 和 '}' 要使用空格 行尾使用分号
+            import { m1, m2 } from '../components/module';
+
+            export const m1 = {};
+            export const m2 = {};
+        ```
 
 5. ### vue组件编码规范
     [vue组件编码规范](https://github.com/pablohpsilva/vuejs-component-style-guide/blob/master/README-CN.md#%E7%9B%AE%E5%BD%95 'vue组件编码规范')
 6. ### 版本管理
-    1. #### 分支开发
-    2. #### 开发完成后需要先在本地测试，尝试部署、打包流程
-    3. #### 无论何时提交代码前都需要优先pull远程分支上的代码进行update
-    4. #### commit需要附带message
-    5. #### 冲突解决优先保证远程端代码的正常（一般冲突都是未先pull就进行了commit操作）
+    1.  分支开发
+    2.  开发完成后需要先在本地测试，尝试部署、打包流程
+    3.  无论何时提交代码前都需要优先pull远程分支上的代码进行update
+    4.  commit需要附带message
+    5.  冲突解决优先保证远程端代码的正常（一般冲突都是未先pull就进行了commit操作）不到迫不得已不要使用强制提交的做法（无视冲突）
