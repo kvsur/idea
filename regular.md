@@ -74,7 +74,7 @@
         * 属性值中的','后
         * 注释 '/'后 和 '/'前
 
-        ```css
+        ```scss
             /* not good */
             .element {
                 color :red! important;
@@ -140,6 +140,7 @@
         * '{'后 和 '}'前
         * 每个属性独占一行
         * 多个规则的分隔符','后
+
         ```css
         /* not good */
         .element
@@ -164,6 +165,7 @@
         ```
     5. #### 注释与注释的缩进
         注释建议采用 /** comment */ 形式（即使在scss或者less中也不要使用 // comment）
+
         ```css
             /* Modal header */
         .modal-header {
@@ -184,5 +186,43 @@
             color: red; /* color red */
         }
         ```
+
+    6. #### css中的命名规则及全局变量
+        *在预编译css中，如果某些属性值在频繁出现使用，建议在全局或局部文件添加可复用的变量*
+        * 类名采用小写字母，以中划线分隔
+        * ID采用驼峰形式
+        * 预编译css中的变量、函数、混合、placeholder采用驼峰命名
+
+        ```scss
+            /* class */
+            .element-content {
+                ...
+            }
+
+            /* id */
+            #myDialog {
+                ...
+            }
+
+            /* 变量 */
+            $colorBlack: #000;
+
+            /* 函数 */
+            @function pxToRem($px) {
+                ...
+            }
+
+            /* 混合 */
+            @mixin centerBlock {
+                ...
+            }
+
+            /* placeholder */
+            %myDialog {
+                ...
+            }
+        ```
+
+    7. #### 属性简写
 4. ### JavaScript
 5. ### 版本管理
