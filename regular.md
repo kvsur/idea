@@ -541,6 +541,26 @@
             export const m1 = {};
             export const m2 = {};
         ```
+    12. #### 处理好异步事件
+        对于异步事件或者异步调用，不推荐 setTimeout之类的岩石操作；
+        尽可能的先尝试回调 + 事件发布订阅模式
+        ```javascript
+        const emitor = new Emitor();
+
+
+        emitor.on('cb', () => {});
+
+        new Promise((res, rej) => {
+            fetch(url).then(data => {
+                res(data.json());
+            }).catch(e => {
+                rej(e);
+            })
+        }).then(data => {
+            emitor.emit('cb');
+        });
+
+        ```
 
 5. ### vue组件编码规范
     [vue组件编码规范](https://github.com/pablohpsilva/vuejs-component-style-guide/blob/master/README-CN.md#%E7%9B%AE%E5%BD%95 'vue组件编码规范')
