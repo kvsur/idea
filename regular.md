@@ -294,7 +294,9 @@
                 opacity: 1;
             }
         ```
-    10. #### 其他
+    10. #### 兼容性书写规范
+        
+    11. #### 其他
         >* 不允许有空的规则；
         >* 元素选择器用小写字母；
         >* 去掉小数点前面的0；
@@ -310,4 +312,7 @@
         >* 尽量少用'*'选择器。
 
 4. ### JavaScript
-5. ### 版本管理
+
+5. ### vue组件编码规范
+    [vue组件编码规范](https://github.com/pablohpsilva/vuejs-component-style-guide/blob/master/README-CN.md#%E7%9B%AE%E5%BD%95 'vue组件编码规范')
+6. ### 版本管理
