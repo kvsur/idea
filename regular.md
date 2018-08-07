@@ -12,7 +12,7 @@
         ......
     4. #### 目录命名
         `
-            scripts, styles, images, data_models
+        scripts, styles, images, data_models
         `
 2. ### HTML
     1. #### 属性值
@@ -36,11 +36,9 @@
         class是为高可复用组件设计的，所以应该放在第一位；尽量少的使用id；
         对于boolean属性值，存在的话表示为true，不存在则为false
 
-        `(html)
+        `
             <input type="text" disabled>
-
             <input type="checkbox" value="1" checked>
-
             <select>
                 <option value="1" selected>1</option>
             </select>
@@ -54,7 +52,6 @@
             position: absolute;
             top: 10px;
             left: 10px;
-
             border-radius: 10px;
             width: 50px;
             height: 50px;
@@ -83,52 +80,42 @@
                 color :red! important;
                 background-color: rgba(0,0,0,.5);
             }
-
             /* good */
             .element {
                 color: red !important;
                 background-color: rgba(0, 0, 0, .5);
             }
-
             /* not good */
             .element ,
             .dialog{
                 ...
             }
-
             /* good */
             .element,
             .dialog {
-
             }
-
             /* not good */
             .element>.dialog{
                 ...
             }
-
             /* good */
             .element > .dialog{
                 ...
             }
-
             /* not good */
             .element{
                 ...
             }
-
             /* good */
             .element {
                 ...
             }
-
             /* not good */
             @if{
                 ...
             }@else{
                 ...
             }
-
             /* good */
             @if {
                 ...
