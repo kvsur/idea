@@ -299,7 +299,7 @@
         ```
     9. #### 属性书写顺序
         属性声明可以做一个分组处理，组之间可以用行分开；
-        推荐属性顺序可参照[属性声明顺序](https://github.com/kvsur/idea/blob/master/sort_attr.md)
+        推荐属性顺序可参照[属性声明顺序](./sort_attr.md)
         
         ```css
             .declaration-order {
